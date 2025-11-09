@@ -9,12 +9,13 @@ for row in range(n): #행별로 행복 수열 찾기
         if lst and grid[row][col]==lst[-1]:
             count+=1
         lst.append(grid[row][col])
-    
+
+
     if count>=m:
         answer+=1
 
 
-for col in range(n): #행별로 행복 수열 찾기
+for col in range(n): #열별로 행복 수열 찾기
     lst=[]
     count=1
     for row in range(n):
@@ -22,8 +23,11 @@ for col in range(n): #행별로 행복 수열 찾기
             count+=1
         lst.append(grid[row][col])
     
+
     if count>=m:
         answer+=1
+    
+    
     
 
 print(answer)

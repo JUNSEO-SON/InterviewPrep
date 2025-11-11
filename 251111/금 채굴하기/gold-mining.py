@@ -16,7 +16,7 @@ def distance(grid,y,x,k):
 max_gold=0
 for i in range(n):
     for j in range(n):
-        for k in range(n):
+        for k in range(1,n+1):
             count,gold=distance(grid,i,j,k)
             if k**2+(k+1)**2 <= m*gold:
                 max_gold=max(gold,max_gold)

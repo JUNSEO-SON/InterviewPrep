@@ -9,10 +9,10 @@ lst=u+d
 
 def pusher(lst):
     temp=lst.pop()
-    lst.insert(0,temp)
+    lst=[temp]+lst[:] #2회연산
     return lst
 
-for _ in range(t):
+for _ in range(t%(2*n)):
     lst=pusher(lst)
 
 print(*lst[:n])

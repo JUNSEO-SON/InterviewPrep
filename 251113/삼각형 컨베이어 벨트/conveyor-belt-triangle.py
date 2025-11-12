@@ -12,6 +12,6 @@ lst=l+r+d
 for _ in range(k):
     lst=[lst[-1]]+lst[:len(lst)-1]
 
-print(*lst[:3])
-print(*lst[3:6])
-print(*lst[6:9])
+print(*lst[:n])
+print(*lst[n:2*n])
+print(*lst[2*n:3*n])

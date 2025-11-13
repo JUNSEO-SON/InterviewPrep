@@ -14,13 +14,13 @@ ans=[]
 def move(grid,y,x):
     ans.append(grid[y][x])
     for i in range(4):
-        if 0<=y+dy[i]<n and 0<=x+dx[i]<n:
-            new_y=y+dy[i]
-            new_x=x+dx[i]
+        new_y=y+dy[i]
+        new_x=x+dx[i]
+        if 0<=new_y<n and 0<=new_x<n:
             if grid[new_y][new_x]>grid[y][x]:
                 break
             
-    if new_y and new_x and grid[new_y][new_x]>grid[y][x]:
+    if grid[new_y][new_x]>grid[y][x]:
         move(grid,new_y,new_x)
     
 move(a,r,c)

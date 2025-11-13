@@ -16,11 +16,11 @@ def move(grid,y,x):
     for i in range(4):
         new_y=y+dy[i]
         new_x=x+dx[i]
-        if 0<=new_y<n and 0<=new_x<n:
+        if 0<=new_y<=n and 0<=new_x<=n:
             if grid[new_y][new_x]>grid[y][x]:
                 break
             
-    if 0<=new_y<n and 0<=new_x<n:
+    if 0<=new_y<=n and 0<=new_x<=n:
         if grid[new_y][new_x]>grid[y][x]:
             move(grid,new_y,new_x)
     

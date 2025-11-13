@@ -20,8 +20,9 @@ def move(grid,y,x):
             if grid[new_y][new_x]>grid[y][x]:
                 break
             
-    if grid[new_y][new_x]>grid[y][x]:
-        move(grid,new_y,new_x)
+    if 0<=new_y<n and 0<=new_x<n:
+        if grid[new_y][new_x]>grid[y][x]:
+            move(grid,new_y,new_x)
     
 move(a,r,c)
 print(*ans)

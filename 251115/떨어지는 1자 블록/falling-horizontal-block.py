@@ -11,10 +11,13 @@ for col in range(k,k+m):
         if grid[row][col-1]==1:
             height=min(height,row)
 
-
+count=0
 for col in range(n):
     if grid[height-1][col]==0:
         grid[height-1][col]=1
+        count+=1
+    if count==m:
+        break
 
 for row in grid:
     print(*row)

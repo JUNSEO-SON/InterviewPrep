@@ -4,7 +4,7 @@ grid = [list(map(int, input().split())) for _ in range(n)]
 # Please write your code here.
 
 # k~k+m-1 까지 검사
-height=n-1
+height=n
 # location=0
 for col in range(k,k+m):
     for row in range(n):

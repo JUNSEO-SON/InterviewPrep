@@ -46,10 +46,13 @@ def move(grid,count):
                 if grid[row+dy[j]][col+dx[j]]==maxnum:
                     if next_count[row+dy[j]+1][col+dx[j]+1]:
                         next_count[row+dy[j]+1][col+dx[j]+1]+=1
+                        break
                     else:
                         next_count[row+dy[j]+1][col+dx[j]+1]=1
+                        break
 
     return next_count
+    
 for _ in range(t):
     count=move(a,count)
 
@@ -58,5 +61,6 @@ for i in range(n+1):
     for j in range(n+1):
         if count[i][j]==1:
             ans+=1
+
 
 print(ans)

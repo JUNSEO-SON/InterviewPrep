@@ -4,16 +4,17 @@ K, N = map(int, input().split())
 lst=[]
 ans=[]
 
-def choose(depth):
-    if depth==N+1:
+def choose():
+    if len(lst)==N:
         ans.append(lst.copy())
         return
 
-    for select in range(1,K+1):
-        lst.append(select)
-        choose(depth+1)
+    for i in range(1,K+1):
+        lst.append(i) #i=1 [1] [1,1] 
+        choose()
         lst.pop()
 
-choose(1)
-for per in ans:
-    print(*per)
+choose()
+
+for a in ans:
+    print(*a)

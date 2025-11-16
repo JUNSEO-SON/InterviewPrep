@@ -15,14 +15,15 @@ def choose(count):
         else:
             new_count=1
         
-        if count<3:
+        if new_count<3:
             lst.append(i)
             choose(new_count)
             lst.pop()
         
 
 choose(1)
-print(ans)
+for a in ans:
+    print(*a)
 
 
 

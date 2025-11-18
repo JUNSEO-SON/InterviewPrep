@@ -11,10 +11,11 @@ def bfs(grid,row,col):
     dy=[-1,1,0,0]
     dx=[0,0,-1,1]
     dq.append((row,col))
+    visited[row][col]=True
     
     while dq:
         row,col=dq.popleft()
-        visited[row][col]=True
+
         for i in range(4):
             move_row=row+dy[i]
             move_col=col+dx[i]

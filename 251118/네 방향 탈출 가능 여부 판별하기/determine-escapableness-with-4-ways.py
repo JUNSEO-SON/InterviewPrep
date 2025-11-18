@@ -21,6 +21,7 @@ def bfs(grid,row,col):
 
             if 0<=move_col<m and 0<=move_row<n:
                 if grid[move_row][move_col]==1 and visited[move_row][move_col]==False:
+                    visited[row][col]=True
                     dq.append((move_row,move_col))
 
     return visited[n-1][m-1]

@@ -8,13 +8,15 @@ ans = 0
 def find_max_score(turn_cnt):
     global ans
     
+  
+    score=0
+    for location in locations:
+        if location>=m:
+            score+=1
+    ans = max(ans, score)
+    
     if turn_cnt == n:
-        score=0
-        for location in locations:
-            if location>=m:
-                score+=1
-        ans = max(ans, score)
-        return 
+        return
 
     move = nums[turn_cnt]
     

@@ -33,5 +33,7 @@ ans=knight_bfs(grid,r1,c1,r2,c2)
 
 if grid[r2][c2]==1:
     print(ans)
+elif r1==r2 and c1==c2:
+    print(0)
 else:
     print(-1)

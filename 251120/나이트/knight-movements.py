@@ -31,7 +31,7 @@ def knight_bfs(grid,r1,c1,r2,c2):
 
 ans=knight_bfs(grid,r1,c1,r2,c2)
 
-if r1!=r2 and c1!=c2 and grid[r2][c2]==1:
+if (r1,c1)!=(r2,c2) and grid[r2][c2]==1:
     print(ans)
 elif r1==r2 and c1==c2:
     print(0)

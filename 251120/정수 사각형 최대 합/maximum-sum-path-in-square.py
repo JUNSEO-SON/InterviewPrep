@@ -14,7 +14,7 @@ for col in range(n):
             dp[row][col]=dp[row][col-1]+grid[row][col]
 #  -----------------------------------------------------------
 
-        else:
+        if row>=1 and col>=1:
             dp[row][col]=max(dp[row-1][col]+grid[row][col],dp[row][col-1]+grid[row][col])
 
 

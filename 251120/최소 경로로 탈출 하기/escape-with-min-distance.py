@@ -14,7 +14,7 @@ def bfs(grid):
     q.append((0,0,0))
     grid[0][0]=2
     while q:
-        r,c,d=q.pop()
+        r,c,d=q.popleft()
 
         d+=1
         for i in range(4):

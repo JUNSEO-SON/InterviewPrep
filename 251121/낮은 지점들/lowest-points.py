@@ -6,10 +6,7 @@ d={}
 for point in points:
     x=point[0]
     y=point[1]
-    if x in d:
-        d[x]=min(d[x],y)
-        
-    else:
-        d[x]=y
+
+    d[x]=min(d.get(x,float(inf)),y)
 
 print(sum(d.values()))

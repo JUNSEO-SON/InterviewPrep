@@ -7,6 +7,6 @@ for point in points:
     x=point[0]
     y=point[1]
 
-    d[x]=min(d.get(x,float(inf)),y)
+    d[x]=min(d.get(x,float('inf')),y)
 
 print(sum(d.values()))

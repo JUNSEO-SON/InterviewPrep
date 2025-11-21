@@ -3,4 +3,8 @@ sequence = list(map(int, input().split()))
 
 # Please write your code here.
 
-print(n-1)
+
+if sequence==sorted(sequence):
+    print(0)
+else:
+    print(n-1)

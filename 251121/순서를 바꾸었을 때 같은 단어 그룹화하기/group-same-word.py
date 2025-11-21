@@ -8,5 +8,4 @@ for word in words:
     else:
         memory[tuple(word)]+=1
 
-a=sorted(list(memory.values()),reverse=True)
-print(a[0])
+print(max(memory.values()))

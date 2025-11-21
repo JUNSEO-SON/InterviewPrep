@@ -9,4 +9,8 @@ word_dict={}
 for i,v in enumerate(words):
     word_dict[v]=i
 
-print(word_dict)
+for q in queries:
+    if q.isdigit():
+        print(words[int(q)])
+    else:
+        print(word_dict[q])

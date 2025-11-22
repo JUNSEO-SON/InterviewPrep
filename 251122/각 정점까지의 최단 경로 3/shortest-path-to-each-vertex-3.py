@@ -33,4 +33,10 @@ def dijkstra(graph,start):
 
 
 distances=dijkstra(graph,1)
-print(*distances[2:],sep='\n')
+
+for d in distances[2:]:
+    if d==float('inf'):
+        print(-1)
+    else:
+        print(d)
+

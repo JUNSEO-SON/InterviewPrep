@@ -20,8 +20,8 @@ def dijkstra(graph,start):
 
         curr_d,curr_n=heappop(pq)
 
-        if curr_d>distances[curr_n]:
-            continue
+        # if curr_d>distances[curr_n]:
+        #     continue
         
         for n, w in graph[curr_n]:
             new_d=curr_d+w

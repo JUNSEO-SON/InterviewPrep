@@ -10,33 +10,34 @@ for _ in range(m):
 # Please write your code here.
 
 def dijkstra(graph,start):
-    l=len(graph)
-    distances=[float('inf') for _ in range(l)]
-    distances[start]=0
 
     pq=[]
-    heappush(pq,(start,0))
+    distances=[float('inf') for _ in range(len(graph))]
+    distances[start]=0
+    heappush(pq,(0,start))
 
     while pq:
-        curr_node,curr_dist=heappop(pq)
 
-        if distances[curr_node]<curr_dist:
+        curr_d,curr_n=heappop(pq)
+
+        if curr_d>distances[curr_n]:
             continue
-    
-        for n,w in graph[curr_node]:
-            new_dist=curr_dist+w
-            if new_dist<distances[n]:
-                distances[n]=new_dist
-                heappush(pq,(n,new_dist)) 
-    
-    return distances
+        
+        for n, w in graph[curr_n]:
+            new_d=curr_d+w
 
+            if new_d < distances[n]:
+                distances[n]=new_d
+                heappush(pq,(new_d,n))
+
+    return distances[start+1:]
 
 distances=dijkstra(graph,1)
 
-for d in distances[2:]:
-    if d==float('inf'):
+for distance in distances:
+    if distance == float('inf'):
         print(-1)
     else:
-        print(d)
+        print(distance)
+
 

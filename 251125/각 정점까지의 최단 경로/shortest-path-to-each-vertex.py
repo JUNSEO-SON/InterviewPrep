@@ -32,7 +32,7 @@ def dijkstra(graph,start):
                 distances[n]=new_dist
                 heappush(pq,(new_dist,n))
 
-    return distances[1:]
+    return distances
 
 dist=dijkstra(graph,k)
 

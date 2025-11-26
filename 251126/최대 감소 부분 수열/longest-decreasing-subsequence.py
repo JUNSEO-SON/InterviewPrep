@@ -2,8 +2,8 @@ n = int(input())
 m = list(map(int, input().split()))
 
 # Please write your code here.
-dp=[0 for _ in range(n)]
-dp[0]=1
+dp=[1 for _ in range(n)]
+
 
 for i in range(n):
     for j in range(i):

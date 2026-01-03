@@ -3,4 +3,11 @@ n = input()
 
 # Please write your code here.
 
-print(bin(int(n,a))[2:])
+target=(int(n,a))
+
+lst=[]
+while target>0:
+    lst.append(target%b)
+    target=target//b
+
+print(*lst[::-1],sep='')
